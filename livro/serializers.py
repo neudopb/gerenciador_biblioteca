@@ -8,8 +8,6 @@ class GeneroSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class LivrosSerializer(serializers.ModelSerializer):
-    genero = GeneroSerializer()
-
     class Meta:
         model = Livros
         fields = '__all__'

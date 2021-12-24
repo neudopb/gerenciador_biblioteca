@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'accounts',
     'livro',
+    'emprestimo',
 ]
 
 AUTH_USER_MODEL = 'accounts.Usuario'
