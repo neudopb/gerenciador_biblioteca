@@ -1,6 +1,8 @@
-from django.urls import path
+from django.urls import path, include
+from .api import viewsets
 from . import views
 
 urlpatterns = [
-    path('cadastrar/', views.cadastrar)
+    path('api/', viewsets.UsuarioCreateAPIView.as_view()),
+    path('api/list/', viewsets.UsuarioListAPIView.as_view()),
 ]
