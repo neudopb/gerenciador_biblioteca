@@ -1,0 +1,1115 @@
+{
+	"info": {
+		"_postman_id": "ebc941fb-0340-4145-ad08-75e99b714a0b",
+		"name": "gerenciadorbiblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastro de usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Heitor\",\r\n    \"last_name\": \"Paulino\",\r\n    \"telefone\": \"84999887766\",\r\n    \"email\": \"heitor@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/accounts/api/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"api",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cadastro de usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Heitor\",\r\n    \"last_name\": \"Paulino\",\r\n    \"telefone\": \"84999887766\",\r\n    \"email\": \"heitor@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/accounts/api/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"accounts",
+								"api",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"heitor@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/token/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"token",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"heitor@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/token/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"token",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Listar Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/accounts/api/list/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"api",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Genero",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"comedia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/genero/api/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"genero",
+						"api",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cadastrar Genero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"comedia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/genero/api/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"livro",
+								"genero",
+								"api",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Editar Genero",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"comédia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/genero/api/2/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"genero",
+						"api",
+						"2",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cadastrar Genero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"comedia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/genero/api/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"livro",
+								"genero",
+								"api",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Deletar Genero",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/genero/api/2/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"genero",
+						"api",
+						"2",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cadastrar Genero",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"comedia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/genero/api/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"livro",
+								"genero",
+								"api",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Listar Genero",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/genero/api/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"genero",
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Genero id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/genero/api/1/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"genero",
+						"api",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Livro",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Harry Potter 5\",\r\n\t\"autor\": \"JK\",\r\n\t\"coautor\": \"desconhecido\",\r\n\t\"genero\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/api/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"api",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cadastrar Livro",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nome\": \"Harry Potter\",\r\n\t\"autor\": \"JK\",\r\n\t\"coautor\": \"desconhecido\",\r\n\t\"genero\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/api/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"livro",
+								"api",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Editar Livro",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Harry Potter\",\r\n\t\"autor\": \"JK\",\r\n\t\"coautor\": \"não informado\",\r\n\t\"genero\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/api/2/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"api",
+						"2",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Editar Livro",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nome\": \"Harry Potter\",\r\n\t\"autor\": \"JK\",\r\n\t\"coautor\": \"não informado\",\r\n\t\"genero\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/api/2/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"livro",
+								"api",
+								"2",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Deletar Livro",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/api/3/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"api",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Livro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/api/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Livro id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/livro/api/2/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"livro",
+						"api",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar emprestimo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"data_emprestimo\": \"2021-12-21\",\r\n\t\"data_devolucao\": \"2022-01-01\",\r\n\t\"livro\": 7,\r\n\t\"usuario\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/emprestimo/api/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"emprestimo",
+						"api",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cadastrar emprestimo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data_emprestimo\": \"2021-12-01\",\r\n\t\"data_devolucao\": \"2021-12-30\",\r\n\t\"livro\": 2,\r\n\t\"usuario\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/emprestimo/api/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"emprestimo",
+								"api",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Editar emprestimo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"data_emprestimo\": \"2021-12-01\",\r\n\t\"data_devolucao\": \"2021-12-29\",\r\n\t\"livro\": 2,\r\n\t\"usuario\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/emprestimo/api/3/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"emprestimo",
+						"api",
+						"3",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Editar emprestimo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data_emprestimo\": \"2021-12-01\",\r\n\t\"data_devolucao\": \"2021-12-29\",\r\n\t\"livro\": 2,\r\n\t\"usuario\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gerenciadorbiblioteca.herokuapp.com/emprestimo/api/3/",
+							"protocol": "https",
+							"host": [
+								"gerenciadorbiblioteca",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"emprestimo",
+								"api",
+								"3",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Deletar emprestimo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/emprestimo/api/3/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"emprestimo",
+						"api",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar emprestimo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/emprestimo/api/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"emprestimo",
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar emprestimo id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/emprestimo/api/1/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"emprestimo",
+						"api",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar emprestimo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwNDYxODMzLCJpYXQiOjE2NDAzNzU0MzMsImp0aSI6ImY4ZjMxMmUxNzk2NDQ2N2E5NDU2YmYwZjViZGMwYzA0IiwidXNlcl9pZCI6Mn0.AgrJoqhmwv8rllDbvgv1fMudGn1EjM5Lw-pX1ztku9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gerenciadorbiblioteca.herokuapp.com/emprestimo/api/finalizar/1/",
+					"protocol": "https",
+					"host": [
+						"gerenciadorbiblioteca",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"emprestimo",
+						"api",
+						"finalizar",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
