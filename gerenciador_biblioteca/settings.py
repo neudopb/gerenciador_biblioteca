@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'livro',
 ]
+
+AUTH_USER_MODEL = 'accounts.Usuario'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,12 +80,12 @@ WSGI_APPLICATION = 'gerenciador_biblioteca.wsgi.application'
 
 DATABASES  = {
     'default' : {
-        'ENGINE' : 'django.db.backends.postgresql' ,
-        'NOME' : 'gerenciador_biblioteca' ,
-        'USUÁRIO' : 'postgres' ,
-        'SENHA' : 'postgres' ,
-        'HOST' : 'localhost' ,
-        'PORT' : '5432'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gerenciador_biblioteca',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
