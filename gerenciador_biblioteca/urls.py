@@ -10,4 +10,5 @@ urlpatterns = [
 
     path('accounts/', include('accounts.urls')),
     path('livro/', include('livro.urls')),
+    path('emprestimo/', include('emprestimo.urls')),
 ]

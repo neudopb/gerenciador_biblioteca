@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from livro.models import Genero, Livros, Emprestimo
+from livro.models import Genero, Livros
 from accounts.serializers import UsuarioSerializer
 
 class GeneroSerializer(serializers.ModelSerializer):
@@ -10,12 +10,4 @@ class GeneroSerializer(serializers.ModelSerializer):
 class LivrosSerializer(serializers.ModelSerializer):
     class Meta:
         model = Livros
-        fields = '__all__'
-
-class EmprestimoSerializer(serializers.ModelSerializer):
-    usuario = UsuarioSerializer()
-    livro = LivrosSerializer()
-
-    class Meta:
-        model = Emprestimo
         fields = '__all__'

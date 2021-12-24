@@ -15,7 +15,7 @@ class Livros(models.Model):
     nome = models.CharField(max_length=100)
     autor = models.CharField(max_length=50)
     coautor = models.CharField(max_length=50, blank=True)
-    data_cadastro = models.DateTimeField(default =timezone.now)
+    data_cadastro = models.DateTimeField(default=timezone.now)
     emprestado = models.BooleanField(default=False)
     genero = models.ForeignKey(Genero, on_delete=models.DO_NOTHING)
 
