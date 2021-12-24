@@ -1,6 +1,7 @@
 from django.urls import path
-from . import views
+from livro.views import GeneroListCreateAPIView, GeneroRetrieveUpdateDestroyAPIView
 
 urlpatterns = [
-    path('cadastrar/', views.cadastrar),
+    path('genero/api/', GeneroListCreateAPIView.as_view()),
+    path('genero/api/<int:pk>/', GeneroRetrieveUpdateDestroyAPIView.as_view()),
 ]

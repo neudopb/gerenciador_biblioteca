@@ -1,6 +1,17 @@
-from django.http.response import HttpResponse
-from django.http import HttpResponse
+from rest_framework.generics import CreateAPIView, ListAPIView
+from rest_framework.permissions import IsAuthenticated
+from accounts.models import Usuario
+from accounts.serializers import UsuarioSerializer
 
+class UsuarioCreateAPIView(CreateAPIView):
+    '''Cadastrar Usuario'''
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioSerializer
 
-def cadastrar(request):
-    return HttpResponse('usuario')
+class UsuarioListAPIView(ListAPIView):
+    '''Listar usuario'''
+    permission_classes = (IsAuthenticated,)
+    serializer_class = UsuarioSerializer
+
+    def get_queryset(self):
+        return Usuario.objects.filter(email=self.request.user.email)
